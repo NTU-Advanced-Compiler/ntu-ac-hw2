@@ -2,7 +2,10 @@
 
 ## Overview
 
-This assignment focuses on implementing the Static Single Assignment (SSA) construction algorithm for Bril programs. You will transform non-SSA Bril programs into SSA form, enhancing your understanding of compiler design and optimization techniques.
+In this homework, you will implement the semi-pruned SSA construction algorithm for the Bril inter-
+mediate representation (IR). The goal is to transform a given non-SSA Bril program into its SSA form
+with considering the optimization of eliminating redundant ϕ-functions. You will work through several
+modular components, each building upon the previous to achieve the final SSA-form program.
 
 ## Prerequisites
 
@@ -44,6 +47,8 @@ homework-directory/
 2. Dominator Computation (`dominance.py`)
 3. Phi-Function Insertion (`ssa_construct.py`)
 4. Variable Renaming (`ssa_construct.py`)
+
+Note: Please feel free to modify any codes under `src/` directory to complete the implementation of the SSA construction algorithm. You are also encouraged to add more test cases in `tests/` directory.
 
 ## Running and Testing
 
