@@ -48,7 +48,7 @@ homework-directory/
 3. Phi-Function Insertion (`ssa_construct.py`)
 4. Variable Renaming (`ssa_construct.py`)
 
-Note: Please feel free to modify any part of the starter code to fit your approach. However, you must ensure that when we run your \texttt{driver.py}, it should function correctly as outlined in the assignment instructions. The provided structure is a guideline, but maintaining the functionality of the driver script is crucial for grading. You are also encouraged to add more test cases in `tests/` directory.
+Note: Please feel free to modify any part of the starter code to fit your approach. However, you must ensure that when we run your driver.py, it should function correctly as outlined in the assignment instructions. The provided structure is a guideline, but maintaining the functionality of the driver script is crucial for grading. You are also encouraged to add more test cases in `tests/` directory.
 
 ## Running and Testing
 
