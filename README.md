@@ -2,14 +2,11 @@
 
 ## Overview
 
-In this homework, you will implement the semi-pruned SSA construction algorithm for the Bril inter-
-mediate representation (IR). The goal is to transform a given non-SSA Bril program into its SSA form
-with considering the optimization of eliminating redundant ϕ-functions. You will work through several
-modular components, each building upon the previous to achieve the final SSA-form program.
+In this homework, you will implement the semi-pruned SSA construction algorithm for the Bril intermediate representation (IR). The goal is to transform a given non-SSA Bril program into its SSA form with considering the optimization of eliminating redundant ϕ-functions. You will work through several modular components, each building upon the previous to achieve the final SSA-form program.
 
 ## Prerequisites
 
-- Python 3.6+
+- Python 3.7+
 - Bril toolchain
 
 ## Getting Started
