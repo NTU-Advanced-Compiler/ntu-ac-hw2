@@ -1,0 +1,54 @@
+name: Autograding Tests
+on:
+  push:
+    branches: [main]
+
+permissions:
+  checks: write
+  actions: read
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+
+      - uses: denoland/setup-deno@v1
+        with:
+          deno-version: v1.x
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install Bril
+        run: |
+          bash install_bril.sh
+
+      - name: Problem-1 - Test simple.bril
+        id: problem-1
+        uses: classroom-resources/autograding-command-grader@v1
+        with:
+          test-name: Test simple.bril
+          command: ./run_test_case.sh tests/simple.bril
+          timeout: 30
+          max-score: 1
+
+      - name: Problem-2 - Test fizz-buzz.bril
+        id: problem-2
+        uses: classroom-resources/autograding-command-grader@v1
+        with:
+          test-name: Test fizz-buzz.bril
+          command: ./run_test_case.sh tests/fizz-buzz.bril
+          timeout: 30
+          max-score: 1
+
+      - name: Autograding Reporter
+        uses: classroom-resources/autograding-grading-reporter@v1
+        env:
+          PROBLEM-1_RESULTS: "${{ steps.problem-1.outputs.result }}"
+          PROBLEM-2_RESULTS: "${{ steps.problem-2.outputs.result }}"
+        with:
+          runners: problem-1, problem-2

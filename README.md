@@ -34,6 +34,10 @@ homework-directory/
 ├── tests/
 │ ├── simple.bril
 │ └── [additional test cases]
+├── bril/
+├── install_bril.sh
+├── run_test_case.sh
+├── student_id.txt
 └── README.md
 ```
 
@@ -72,15 +76,16 @@ diff original.out transformed.out
 
 ## Submission Instructions
 
-1. Implement all required functionalities in the `src/` directory.
-2. Test your implementation thoroughly.
-3. Commit and push your changes:
+1. Add your student ID to `student_id.txt`.
+2. Implement all required functionalities in the `src/` directory.
+3. Test your implementation thoroughly.
+4. Commit and push your changes:
    ```bash
    git add src/
    git commit -m "Completed Homework 2"
    git push origin main
    ```
-4. Verify that the GitHub Actions workflow passes all tests.
+5. Verify that the GitHub Actions workflow passes all tests.
 
 ## Additional Resources
 
