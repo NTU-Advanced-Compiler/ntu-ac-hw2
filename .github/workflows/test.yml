@@ -32,7 +32,7 @@ jobs:
         uses: classroom-resources/autograding-command-grader@v1
         with:
           test-name: Test simple.bril
-          command: ./run_test_case.sh tests/simple.bril
+          command: bash ./run_test_case.sh tests/simple.bril
           timeout: 30
           max-score: 1
 
@@ -41,7 +41,7 @@ jobs:
         uses: classroom-resources/autograding-command-grader@v1
         with:
           test-name: Test fizz-buzz.bril
-          command: ./run_test_case.sh tests/fizz-buzz.bril
+          command: bash ./run_test_case.sh tests/fizz-buzz.bril
           timeout: 30
           max-score: 1
 
