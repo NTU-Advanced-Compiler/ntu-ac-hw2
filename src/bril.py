@@ -4,12 +4,14 @@ from typing import Any, Dict, List
 class Instruction:
     def __init__(self, instr: Dict[str, Any]):
         self.instr = instr
-        self.op = instr.get('op')
-        self.args = instr.get('args', [])
-        self.dest = instr.get('dest')
-        self.type = instr.get('type')
-        self.labels = instr.get('labels', [])
-        self.label = instr.get('label')
+        self._op = instr.get('op')
+        self._args = instr.get('args', [])
+        self._dest = instr.get('dest')
+        self._type = instr.get('type')
+        self._funcs = instr.get('funcs', [])
+        self._labels = instr.get('labels', [])
+        self._label = instr.get('label')
+        self._value = instr.get('value')
 
     def __repr__(self):
         return json.dumps(self.instr)
