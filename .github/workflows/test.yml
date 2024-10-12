@@ -36,12 +36,21 @@ jobs:
           timeout: 30
           max-score: 1
 
-      - name: Problem-2 - Test fizz-buzz.bril
+      - name: Problem-2 - Test loop.bril
         id: problem-2
         uses: classroom-resources/autograding-command-grader@v1
         with:
-          test-name: Test fizz-buzz.bril
-          command: bash ./run_test_case.sh tests/fizz-buzz.bril
+          test-name: Test loop.bril
+          command: bash ./run_test_case.sh tests/loop.bril
+          timeout: 30
+          max-score: 1
+      
+      - name: Problem-3 - Test self_loop.bril
+        id: problem-3
+        uses: classroom-resources/autograding-command-grader@v1
+        with:
+          test-name: Test self_loop.bril
+          command: bash ./run_test_case.sh tests/self_loop.bril
           timeout: 30
           max-score: 1
 
