@@ -26,27 +26,26 @@ def collect_definitions(cfg: CFG) -> Dict[str, Set[BasicBlock]]:
     """
     Collects the set of basic blocks in which each variable is defined.
     """
-    # TODO: Implement this function
+    # TODO: Implement variable definition collection
     pass
 
 def insert_phi_functions(cfg: CFG, dom_tree: DominatorTree, def_blocks: Dict[str, Set[BasicBlock]]):
     """
     Inserts φ-functions into the basic blocks.
     """
-    # TODO: Implement the placement of φ-functions using dominance frontiers.
+    # TODO: Implement φ-function insertion using dominance frontiers
     pass
 
 def rename_variables(cfg: CFG, dom_tree: DominatorTree):
     """
     Renames variables to ensure each assignment is unique.
     """
-    # TODO: Implement variable renaming using a traversal of the dominator tree.
+    # TODO: Implement variable renaming
     pass
 
 def reconstruct_instructions(cfg: CFG) -> List[Instruction]:
     """
-    Reconstructs the list of instructions from the CFG after SSA transformation.
+    Reconstructs the instruction list from the CFG after SSA transformation.
     """
-    instrs = []
-    # TODO: Collect instructions from each basic block in the correct order.
+    # TODO: Implement instruction reconstruction
     pass

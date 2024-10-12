@@ -1,6 +1,5 @@
 import sys
-import json
-from bril import parse_bril, Program
+from bril import parse_bril, Program, Const, ValueOperation
 
 def is_ssa(bril_program: Program):
     """
@@ -10,7 +9,7 @@ def is_ssa(bril_program: Program):
     for function in bril_program.functions:
         assigned_vars = set()
         for instr in function.instrs:
-            if instr.dest:
+            if isinstance(instr, (Const, ValueOperation)):
                 var = instr.dest
                 if var in assigned_vars:
                     # Variable assigned more than once
