@@ -2,7 +2,7 @@
 
 ## Overview
 
-In this homework, you will implement the semi-pruned SSA construction algorithm for the Bril intermediate representation (IR). The goal is to transform a given non-SSA Bril program into its SSA form with considering the optimization of eliminating redundant ϕ-functions. You will work through several modular components, each building upon the previous to achieve the final SSA-form program.
+In this homework, you will implement the SSA construction algorithm for the Bril intermediate representation (IR). The goal is to transform a given non-SSA Bril program into its SSA form with considering the optimization of eliminating redundant ϕ-functions. You will work through several modular components, each building upon the previous to achieve the final SSA-form program.
 
 ## Prerequisites
 
@@ -76,12 +76,12 @@ diff original.out transformed.out
 
 ## Submission Instructions
 
-1. Add your student ID to `student_id.txt`.
+1. Open `student_id.txt` and replace the placeholder with your actual student ID.
 2. Implement all required functionalities in the `src/` directory.
 3. Test your implementation thoroughly.
 4. Commit and push your changes:
    ```bash
-   git add src/
+   git add src/ student_id.txt
    git commit -m "Completed Homework 2"
    git push origin main
    ```
@@ -89,5 +89,6 @@ diff original.out transformed.out
 
 ## Additional Resources
 
+- Engineering a Compiler
 - [Bril Language Reference](https://capra.cs.cornell.edu/bril/lang/index.html)
 - Course lecture notes on SSA form and related algorithms
