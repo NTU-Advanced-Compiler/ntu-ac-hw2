@@ -54,11 +54,21 @@ jobs:
           timeout: 30
           max-score: 1
 
+      - name: Problem-4 - Test loop_orig.bril
+        id: problem-4
+        uses: classroom-resources/autograding-command-grader@v1
+        with:
+          test-name: Test loop_orig.bril
+          command: bash ./run_test_case.sh tests/loop_orig.bril
+          timeout: 30
+          max-score: 1
+
       - name: Autograding Reporter
         uses: classroom-resources/autograding-grading-reporter@v1
         env:
           PROBLEM-1_RESULTS: "${{ steps.problem-1.outputs.result }}"
           PROBLEM-2_RESULTS: "${{ steps.problem-2.outputs.result }}"
           PROBLEM-3_RESULTS: "${{ steps.problem-3.outputs.result }}"
+          PROBLEM-4_RESULTS: "${{ steps.problem-4.outputs.result }}"
         with:
-          runners: problem-1, problem-2, problem-3
+          runners: problem-1, problem-2, problem-3, problem-4
