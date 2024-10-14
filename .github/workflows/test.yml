@@ -54,12 +54,12 @@ jobs:
           timeout: 30
           max-score: 1
 
-      - name: Problem-4 - Test loop_orig.bril
+      - name: Problem-4 - Test example.bril
         id: problem-4
         uses: classroom-resources/autograding-command-grader@v1
         with:
-          test-name: Test loop_orig.bril
-          command: bash ./run_test_case.sh tests/loop_orig.bril
+          test-name: Test example.bril
+          command: bash ./run_test_case.sh tests/example.bril
           timeout: 30
           max-score: 1
 

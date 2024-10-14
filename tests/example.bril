@@ -1,4 +1,4 @@
-# Example from the book "Engineering a Compiler"
+# Example from the Fig. 9.13 in the book "Engineering a Compiler"
 @main {
 
 .b0:
