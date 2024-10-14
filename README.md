@@ -49,8 +49,6 @@ homework-directory/
 3. Phi-Function Insertion (`ssa_construct.py`)
 4. Variable Renaming (`ssa_construct.py`)
 
-Note: Please feel free to modify any part of the starter code to fit your approach. However, you must ensure that when we run your driver.py, it should function correctly as outlined in the assignment instructions. The provided structure is a guideline, but maintaining the functionality of the driver script is crucial for grading. You are also encouraged to add more test cases in `tests/` directory.
-
 ## Running and Testing
 
 1. To generate the SSA form of your program:
@@ -86,6 +84,13 @@ diff original.out transformed.out
    git push origin main
    ```
 5. Verify that the GitHub Actions workflow passes all tests.
+
+## Do and Don't
+
+- You are allowed to modify any part of the starter code within the src/ directory, except for is_ssa.py, to suit your approach. While the current structure serves as a guideline, ensuring the driver script functions properly is key for grading.
+- Make sure you have a solid understanding of the algorithm before starting your implementation.
+- Ensure your student ID is correctly entered in the student_id.txt file before submission.
+- DO NOT modify anything outside the src/ directory or the src/is_ssa.py file. Any such changes will be considered cheating.
 
 ## Additional Resources
 

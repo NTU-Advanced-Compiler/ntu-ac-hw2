@@ -53,7 +53,7 @@ fi
 
 if [ $? -ne 0 ]; then
   echo "Error running original program $TEST_FILE with arguments $ARGS"
-  rm -f "$OUTPUT_BIL"
+  rm -f "$OUTPUT_BIL" "$ORIGINAL_OUT"
   exit 1
 fi
 
@@ -65,7 +65,7 @@ fi
 
 if [ $? -ne 0 ]; then
   echo "Error running transformed program $OUTPUT_BIL with arguments $ARGS"
-  rm -f "$OUTPUT_BIL" "$ORIGINAL_OUT"
+  rm -f "$OUTPUT_BIL" "$ORIGINAL_OUT" "$TRANSFORMED_OUT"
   exit 1
 fi
 
