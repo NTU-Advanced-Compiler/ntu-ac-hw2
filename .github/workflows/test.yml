@@ -72,6 +72,33 @@ jobs:
           timeout: 30
           max-score: 1
 
+      - name: Problem-6 - Test factors.bril
+        id: problem-6
+        uses: classroom-resources/autograding-command-grader@v1
+        with:
+          test-name: Test factors.bril
+          command: bash ./run_test_case.sh tests/factors.bril
+          timeout: 30
+          max-score: 1
+
+      - name: Problem-7 - Test reverse.bril
+        id: problem-7
+        uses: classroom-resources/autograding-command-grader@v1
+        with:
+          test-name: Test reverse.bril
+          command: bash ./run_test_case.sh tests/reverse.bril
+          timeout: 30
+          max-score: 1
+
+      - name: Problem-8 - Test pascals_rows.bril
+        id: problem-8
+        uses: classroom-resources/autograding-command-grader@v1
+        with:
+          test-name: Test pascals_rows.bril
+          command: bash ./run_test_case.sh tests/pascals_rows.bril
+          timeout: 30
+          max-score: 1
+
       - name: Autograding Reporter
         uses: classroom-resources/autograding-grading-reporter@v1
         env:
@@ -80,5 +107,8 @@ jobs:
           PROBLEM-3_RESULTS: "${{ steps.problem-3.outputs.result }}"
           PROBLEM-4_RESULTS: "${{ steps.problem-4.outputs.result }}"
           PROBLEM-5_RESULTS: "${{ steps.problem-5.outputs.result }}"
+          PROBLEM-6_RESULTS: "${{ steps.problem-6.outputs.result }}"
+          PROBLEM-7_RESULTS: "${{ steps.problem-7.outputs.result }}"
+          PROBLEM-8_RESULTS: "${{ steps.problem-8.outputs.result }}"
         with:
-          runners: problem-1, problem-2, problem-3, problem-4, problem-5
+          runners: problem-1, problem-2, problem-3, problem-4, problem-5, problem-6, problem-7, problem-8

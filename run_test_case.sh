@@ -22,7 +22,7 @@ if echo "$ARGS_LINE" | grep -q '^# ARGS:'; then
   ARGS=$(python3 -c "
 import random
 random.seed(int('$PYTHON_SEED',16))
-print(' '.join([str(random.randint(1,1000)) for _ in range($NUM_ARGS)]))
+print(' '.join([str(random.randint(100,1000)) for _ in range($NUM_ARGS)]))
 ")
 fi
 
