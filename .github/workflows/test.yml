@@ -63,6 +63,15 @@ jobs:
           timeout: 30
           max-score: 1
 
+      - name: Problem-5 - Test while.bril
+        id: problem-5
+        uses: classroom-resources/autograding-command-grader@v1
+        with:
+          test-name: Test while.bril
+          command: bash ./run_test_case.sh tests/while.bril
+          timeout: 30
+          max-score: 1
+
       - name: Autograding Reporter
         uses: classroom-resources/autograding-grading-reporter@v1
         env:
@@ -70,5 +79,6 @@ jobs:
           PROBLEM-2_RESULTS: "${{ steps.problem-2.outputs.result }}"
           PROBLEM-3_RESULTS: "${{ steps.problem-3.outputs.result }}"
           PROBLEM-4_RESULTS: "${{ steps.problem-4.outputs.result }}"
+          PROBLEM-5_RESULTS: "${{ steps.problem-5.outputs.result }}"
         with:
-          runners: problem-1, problem-2, problem-3, problem-4
+          runners: problem-1, problem-2, problem-3, problem-4, problem-5
