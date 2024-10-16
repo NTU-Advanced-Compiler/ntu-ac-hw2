@@ -90,7 +90,7 @@ diff original.out transformed.out
 - You are allowed to modify any part of the starter code within the src/ directory, except for is_ssa.py, to suit your approach. While the current structure serves as a guideline, ensuring the driver script functions properly is key for grading.
 - Make sure you have a solid understanding of the algorithm before starting your implementation.
 - Ensure your student ID is correctly entered in the student_id.txt file before submission.
-- DO NOT modify anything outside the src/ directory or the src/is_ssa.py file. Any such changes will be considered cheating.
+- DO NOT modify the src/is_ssa.py file or anything outside the src/ directory except student_id.txt. Any such changes will be considered cheating.
 
 ## Additional Resources
 
