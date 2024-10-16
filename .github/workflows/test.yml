@@ -9,7 +9,8 @@ permissions:
   contents: read
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
+    timeout-minutes: 2
     steps:
       - uses: actions/checkout@v4
         with:
@@ -33,7 +34,6 @@ jobs:
         with:
           test-name: Test simple.bril
           command: bash ./run_test_case.sh tests/simple.bril
-          timeout: 30
           max-score: 1
 
       - name: Problem-2 - Test loop.bril
@@ -42,7 +42,6 @@ jobs:
         with:
           test-name: Test loop.bril
           command: bash ./run_test_case.sh tests/loop.bril
-          timeout: 30
           max-score: 1
       
       - name: Problem-3 - Test self_loop.bril
@@ -51,7 +50,6 @@ jobs:
         with:
           test-name: Test self_loop.bril
           command: bash ./run_test_case.sh tests/self_loop.bril
-          timeout: 30
           max-score: 1
 
       - name: Problem-4 - Test example.bril
@@ -60,7 +58,6 @@ jobs:
         with:
           test-name: Test example.bril
           command: bash ./run_test_case.sh tests/example.bril
-          timeout: 30
           max-score: 1
 
       - name: Problem-5 - Test while.bril
@@ -69,7 +66,6 @@ jobs:
         with:
           test-name: Test while.bril
           command: bash ./run_test_case.sh tests/while.bril
-          timeout: 30
           max-score: 1
 
       - name: Problem-6 - Test factors.bril
@@ -78,7 +74,6 @@ jobs:
         with:
           test-name: Test factors.bril
           command: bash ./run_test_case.sh tests/factors.bril
-          timeout: 30
           max-score: 1
 
       - name: Problem-7 - Test reverse.bril
@@ -87,7 +82,6 @@ jobs:
         with:
           test-name: Test reverse.bril
           command: bash ./run_test_case.sh tests/reverse.bril
-          timeout: 30
           max-score: 1
 
       - name: Problem-8 - Test pascals_rows.bril
@@ -96,7 +90,6 @@ jobs:
         with:
           test-name: Test pascals_rows.bril
           command: bash ./run_test_case.sh tests/pascals_rows.bril
-          timeout: 30
           max-score: 1
 
       - name: Autograding Reporter
